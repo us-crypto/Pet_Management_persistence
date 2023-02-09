@@ -2,7 +2,7 @@
 /***
  * classe mammals is childclass of pet and has a input String Name and owner name and has 2 functions and a cunstructur
  */
-public class Mammal extends Pet{
+public abstract class Mammal extends Pet{
     /**
      * Cunstructor to create a new Mammal. Super constructor of Pet is called.
      * @param name name of the pet

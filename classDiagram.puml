@@ -1,0 +1,37 @@
+@startuml
+Pet : + careFor()
+Pet : + getName()
+Pet : + setName()
+Pet : + setOwner()
+Pet : + getOwner()
+Pet <|-- Mammal
+Mammal : + careFor()
+Mammal : + walk()
+abstract class Pet{
+__ private data __
+String name
+String owner
+}
+abstract class Fish{
+
+
+}
+abstract class Mammal{
+
+}
+Mammal <|-- Cat
+Cat : + careFor()
+Cat : + walk()
+Mammal <|-- Rabbit
+Rabbit : + careFor()
+Rabbit : + walk()
+
+Pet <|-- Fish
+Fish : + careFor()
+Fish : + swim()
+Fish : + changeWater()
+Fish <|-- Guppy
+Guppy : + swim()
+Fish <|-- Goldfish
+Goldfish : + swim()
+@enduml

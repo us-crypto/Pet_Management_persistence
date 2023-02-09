@@ -2,7 +2,7 @@
 /***
  * classe pet is superclass of mammals and fishes and has a input String Name and owner name and a cunstructur
  */
-public class Pet {
+public abstract class Pet {
     private String name;
     private String owner;
     /**

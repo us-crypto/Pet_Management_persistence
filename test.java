@@ -5,9 +5,9 @@ public class test {
     public static void main(String[] args) {
         ArrayList<Pet> myList = new ArrayList<Pet>();
         
-        Mammal myMammal=new Mammal("12345","56789");
-        myMammal.careFor();
-        myList.add(myMammal);
+        // Mammal myMammal=new Mammal("12345","56789");
+        // myMammal.careFor();
+        // myList.add(myMammal);
         
         Mammal myCat= new Cat("12345","56789");
         myCat.careFor();
@@ -19,11 +19,11 @@ public class test {
         myRabbit.walk();
         myList.add(myRabbit);
 
-        Fish myFish= new Fish("12345","56789");
-        myFish.careFor();
-        myFish.swim();
-        myFish.changeWater();
-        myList.add(myFish);
+        // Fish myFish= new Fish("12345","56789");
+        // myFish.careFor();
+        // myFish.swim();
+        // myFish.changeWater();
+        // myList.add(myFish);
 
         Fish myGuppy=new Guppy("12345","56789");
         myGuppy.careFor();
@@ -35,11 +35,11 @@ public class test {
         myGold.swim();
         myList.add(myGold);
 
-        Pet myPet= new Pet("Lexi","mojiOwner");
-        System.out.println("her name is "+ myPet.getName() + " and its owned by "+myPet.getOwner());
-        myPet.careFor();
-        myList.add(myMammal);
-        myList.remove(myMammal);
+        // Pet myPet= new Pet("Lexi","mojiOwner");
+        // System.out.println("her name is "+ myPet.getName() + " and its owned by "+myPet.getOwner());
+        // myPet.careFor();
+        // myList.add(myMammal);
+        // myList.remove(myMammal);
 
         for (Pet pet : myList) {
             System.out.println("'" + pet.getName() + "' is owned by " + pet.getOwner());

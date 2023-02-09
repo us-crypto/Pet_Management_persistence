@@ -3,7 +3,7 @@
 /***
  * classe fishes is childclass of pet and has a input String Name and owner name and has 2 functions and a cunstructur
  */
-public class Fish extends Pet{
+public abstract class Fish extends Pet{
     /**
      * Cunstructor to create a new fish. Super constructor of Pet is called.
      * both input String type
