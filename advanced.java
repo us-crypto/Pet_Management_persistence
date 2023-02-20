@@ -28,39 +28,43 @@ public class advanced {
                     owner= scanner.nextLine();
                     System.out.println("what would u like to call ur pet ?");
                     petName= scanner.nextLine();
+                    try {
+                        
+                        if (petName.length()<1) {
+                            throw new ShortPet();
+                        } else {
+                            for (char charName : petName.toCharArray()) {
+                                if ((int)charName==32) {
+                                    throw new ShortPet();
+                                }
+                            }
+                        }
+                    } catch (NoSuchElementException Exception) {
+                        System.out.println("no such a element in pet");
+                    } catch (ShortPet exception){
+                        System.out.println("pet name is too short ");
+                    }
+                    try {
+                        
+                        if (owner.length()<1) {
+                            throw new ShortName();
+                        } else {
+                            for (char charNameOwner : owner.toCharArray()) {
+                                if ((int)charNameOwner==32) {
+                                    throw new ShortName();
+                                }
+                            }
+                        }
+                    } catch (NoSuchElementException Exception) {
+                        System.out.println("no such a element in owner");
+                    } catch (ShortName exception){
+                        System.out.println("owner name is too short ");
+                    }
                     System.out.println("which Pet is wished to be created ?");
                     System.out.println("1- Gold Fish");
                     System.out.println("2- Guppy");
                     System.out.println("3- Rabbit");
                     System.out.println("4- Cat");
-                    try {
-                        
-                        if (petName.length()<1) {
-                            
-                        } else {
-                            for (char charName : petName.toCharArray()) {
-                                if ((int)charName==32) {
-                                    
-                                }
-                            }
-                        }
-                    } catch (NoSuchElementException Exception) {
-                        System.out.println("short name is given for pet  ");
-                    }
-                    try {
-                        
-                        if (owner.length()<1) {
-                            
-                        } else {
-                            for (char charNameOwner : owner.toCharArray()) {
-                                if ((int)charNameOwner==32) {
-                                    
-                                }
-                            }
-                        }
-                    } catch (NoSuchElementException Exception) {
-                        System.out.println("short name is given for owner  ");
-                    }
                     try {
                         int animal = scanner.nextInt();
                         scanner.nextLine();
