@@ -9,23 +9,21 @@ public abstract class Fish extends Pet{
      * both input String type
      * @param name name
      * @param owner owner name 
+     * @throws Exception
      */
-    public Fish(String name , String owner){
-        super( name ,  owner);
+    public Fish(String name, String owner) throws Exception{
+        super(name, owner);
     }
     /**shows what u need for fish care 
      * it calls a change water function
      */
     public void careFor() {
-        System.out.println("fishes: ");
         changeWater();
     } 
     /**
      * Method that let's the fish swim
      */
-    public void swim() {
-        System.out.println("fishes:  ");
-    }
+    public abstract void swim();
 
     /**
      * function prints care for fishes

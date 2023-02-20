@@ -7,8 +7,9 @@ public abstract class Mammal extends Pet{
      * Cunstructor to create a new Mammal. Super constructor of Pet is called.
      * @param name name of the pet
      * @param owner owner's name 
+     * @throws Exception
      */
-    public Mammal(String name, String owner){
+    public Mammal(String name, String owner) throws Exception{
         super(name, owner);
     }
     /**
@@ -16,13 +17,9 @@ public abstract class Mammal extends Pet{
      * 
      * shows what u need for mammal care 
      */
-    public void careFor() {
-       
-    }
+    public abstract void careFor();
     /**
      * Method that let's the Mammal walk
      */
-    public void walk() {
-        System.out.println("The mammal is walking on 4 feet ususally...");
-    }
+    public abstract void walk();
 }

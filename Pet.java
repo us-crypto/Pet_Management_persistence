@@ -2,27 +2,30 @@
 /***
  * classe pet is superclass of mammals and fishes and has a input String Name and owner name and a cunstructur
  */
-public abstract class Pet {
+public abstract class Pet implements Animal  {
     private String name;
     private String owner;
     /**
      * This constructor create a new Pet with a new name and sets an owner.
      * @param name String name of the pet
      * @param owner String name of the owner
+     * @throws Exception
      */
-    public Pet(String name , String owner) {
-        System.out.println("name= "+name);
-        System.out.println("owner= "+owner);
+    public Pet(String name , String owner) throws Exception {
+        // System.out.println("name= "+name);
+        // System.out.println("owner= "+owner);
+        
+        checker(name, owner);
         setOwner(owner);
         setName(name);
     }
+    public abstract void checker(String name, String owner) throws Exception;
     /**
      * shows what u need for pet care 
      * Gives a console output what to do.
      */
-    public void careFor() {
-        
-    } 
+    public abstract void careFor();
+    
         /**
      * function prints care for fishes
      */
@@ -46,7 +49,7 @@ public abstract class Pet {
      * setting the owner name to some new name
      * @param name String new owner name
      */
-    private void setOwner(String owner){
+    public void setOwner(String owner){
         this.owner=owner;
     }
     /**

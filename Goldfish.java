@@ -7,10 +7,12 @@ public class Goldfish extends Fish{
      * both input String type
      * @param name name
      * @param owner owner name 
+     * @throws Exception
      */
-    public Goldfish(String name , String owner){
+    public Goldfish(String name , String owner) throws Exception{
         super( name ,  owner);
         //        super("aaaaa","sssss");  
+        checker(name, owner);
     }
 
     /**Method that let's the guppy swims
@@ -20,4 +22,14 @@ public class Goldfish extends Fish{
         System.out.println("swimming here and there. ");
         //super.swim();
     }
+
+    public void checker(String name, String owner) {
+        if (name.length()<1) {
+            throw new NullPointerException ("pet name is too short");
+        }
+        if (owner.length()<1) {
+            throw new NullPointerException ("owner name is too short");
+        }
+    }
+
 }

@@ -1,37 +1,44 @@
 @startuml
-Pet : + careFor()
-Pet : + getName()
-Pet : + setName()
-Pet : + setOwner()
-Pet : + getOwner()
-Pet <|-- Mammal
-Mammal : + careFor()
-Mammal : + walk()
+
+
 abstract class Pet{
-__ private data __
-String name
-String owner
+    {abstract} + careFor()
+    + String getName()
+    + void setName()
+    + void setOwner()
+    + String getOwner()
+    __ private data __
+    - String name
+    - String owner
+
 }
 abstract class Fish{
-
-
+    + void careFor()
+    {abstract} + void swim()
+    + void changeWater()
 }
 abstract class Mammal{
-
+    {abstract} + void careFor()
+    {abstract} + void walk()
 }
-Mammal <|-- Cat
-Cat : + careFor()
-Cat : + walk()
-Mammal <|-- Rabbit
-Rabbit : + careFor()
-Rabbit : + walk()
-
+class Cat{
+    {abstract} + void careFor()
+    {abstract} + void walk()
+}
+class Rabbit{
+    {abstract} + void careFor()
+    {abstract} + void walk()
+}
+class Guppy{
+    {abstract} + void swim()
+}
+class Goldfish{
+    {abstract} + void swim()
+}
+Pet <|-- Mammal
 Pet <|-- Fish
-Fish : + careFor()
-Fish : + swim()
-Fish : + changeWater()
+Mammal <|-- Cat
+Mammal <|-- Rabbit
 Fish <|-- Guppy
-Guppy : + swim()
 Fish <|-- Goldfish
-Goldfish : + swim()
 @enduml
