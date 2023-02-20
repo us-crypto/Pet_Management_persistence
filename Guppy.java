@@ -11,7 +11,6 @@ public class Guppy extends Fish{
      */
     public Guppy(String name , String owner) throws Exception{
         super( name ,  owner);
-        checker(name, owner);
     }
     /**
      * Method that let's the guppy swims
@@ -19,14 +18,7 @@ public class Guppy extends Fish{
     public void swim() {
         System.out.println("swimming in circles ");
     }
-    public void checker(String name, String owner) {
-        if (name.length()<1) {
-            throw new NullPointerException ("pet name is too short");
-        }
-        if (owner.length()<1) {
-            throw new NullPointerException ("owner name is too short");
-        }
-    }
+
 
 
 }

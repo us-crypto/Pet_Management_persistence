@@ -9,7 +9,6 @@ public class Cat extends Mammal {
      */
     public Cat(String name, String owner) throws Exception{
         super(name, owner);
-        checker(name, owner);
     }
     /**
      * text function no parameter no return
@@ -25,12 +24,5 @@ public class Cat extends Mammal {
     public void walk() {
         System.out.println("sneaking ");
     }
-    public void checker(String name, String owner) throws Exception {
-        if (name.length()<1) {
-            throw new Exception ("pet name is too short");
-        }
-        if (owner.length()<1) {
-            throw new NullPointerException ("owner name is too short");
-        }
-    }
+
 }

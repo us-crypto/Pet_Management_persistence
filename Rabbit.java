@@ -12,7 +12,6 @@ public class Rabbit extends Mammal{
     public Rabbit(String name , String owner) throws Exception{
        
         super( name ,  owner);
-        checker(name,owner);
     }
     /**shows what u need for rabbit care 
      * text function no parameter no return
@@ -26,13 +25,6 @@ public class Rabbit extends Mammal{
     public void walk() {
         System.out.println("jumping ");
     }
-    public void checker(String name, String owner) {
-        if (name.length()<1) {
-            throw new NullPointerException ("pet name is too short");
-        }
-        if (owner.length()<1) {
-            throw new NullPointerException ("owner name is too short");
-        }
-    }
+
 
 }

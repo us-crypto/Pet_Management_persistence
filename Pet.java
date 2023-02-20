@@ -19,7 +19,14 @@ public abstract class Pet implements Animal  {
         setOwner(owner);
         setName(name);
     }
-    public abstract void checker(String name, String owner) throws Exception;
+    public void checker(String name, String owner) throws Exception {
+        if (name.length()<1) {
+            throw new ShortPetNameException ("pet name is too short");
+        }
+        if (owner.length()<1) {
+            throw new ShortOwnerNameException ("owner name is too short");
+        }
+    }
     /**
      * shows what u need for pet care 
      * Gives a console output what to do.
