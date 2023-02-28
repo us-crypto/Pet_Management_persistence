@@ -16,10 +16,11 @@ public class Goldfish extends Fish{
 
     /**Method that let's the guppy swims
      * text function no parameter no return
+     * @return 
      */
-    public void swim() {
+    public String swim() {
         System.out.println("swimming here and there. ");
-        //super.swim();
+        return "swimming here and there";
     }
 
 

@@ -14,15 +14,18 @@ public class Cat extends Mammal {
      * text function no parameter no return
      * shows what un eed to care about cat
      */
-    public void careFor() {
+    public String careFor() {
         System.out.println("brush their fur");
+        return "brush their fur";
     }
     /**
      * text function no parameter no return
      * shows how a cat walks
+     * @return 
      */
-    public void walk() {
+    public String walk() {
         System.out.println("sneaking ");
+        return "sneaking";
     }
 
 }

@@ -17,19 +17,22 @@ public abstract class Fish extends Pet{
     /**shows what u need for fish care 
      * it calls a change water function
      */
-    public void careFor() {
+    public String careFor() {
         changeWater();
+        String reurn =changeWater();
+        return reurn;
     } 
     /**
-     * Method that let's the fish swim
+     * Method that let's the fish swim 
      */
-    public abstract void swim();
+    public abstract String swim();
 
     /**
      * function prints care for fishes
      */
-    public void changeWater() {
+    public String changeWater() {
         System.out.println("change water");
+        return "change water";
     }
 }
 

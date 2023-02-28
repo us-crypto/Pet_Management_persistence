@@ -17,9 +17,9 @@ public abstract class Mammal extends Pet{
      * 
      * shows what u need for mammal care 
      */
-    public abstract void careFor();
+    public abstract String careFor();
     /**
      * Method that let's the Mammal walk
      */
-    public abstract void walk();
+    public abstract String walk();
 }

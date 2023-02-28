@@ -14,9 +14,11 @@ public class Guppy extends Fish{
     }
     /**
      * Method that let's the guppy swims
+     * @return 
      */
-    public void swim() {
+    public String swim() {
         System.out.println("swimming in circles ");
+        return "swimming in circles ";
     }
 
 

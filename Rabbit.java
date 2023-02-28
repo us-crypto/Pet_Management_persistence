@@ -16,14 +16,17 @@ public class Rabbit extends Mammal{
     /**shows what u need for rabbit care 
      * text function no parameter no return
      */
-    public void careFor() {
+    public String careFor() {
         System.out.println("clean their barn");
+        return "clean their barn";
     }
     /**Method that let's the rabbit walk
      * text function no parameter no return
+     * @return 
      */
-    public void walk() {
+    public String walk() {
         System.out.println("jumping ");
+        return "jumping ";
     }
 
 

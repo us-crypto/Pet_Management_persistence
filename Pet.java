@@ -31,7 +31,7 @@ public abstract class Pet implements Animal  {
      * shows what u need for pet care 
      * Gives a console output what to do.
      */
-    public abstract void careFor();
+    public abstract String careFor();
     
         /**
      * function prints care for fishes

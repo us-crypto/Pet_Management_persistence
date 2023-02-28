@@ -8,7 +8,7 @@ interface Animal {
 
     void setOwner(String string);
 
-    void careFor();
+    String careFor();
 
     
 }
