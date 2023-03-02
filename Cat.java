@@ -7,8 +7,8 @@ public class Cat extends Mammal {
      * @param owner owner name 
      * @throws Exception
      */
-    public Cat(String name, String owner) throws Exception{
-        super(name, owner);
+    public Cat(String name, String owner, String type) throws Exception{
+        super(name, owner, type);
     }
     /**
      * text function no parameter no return

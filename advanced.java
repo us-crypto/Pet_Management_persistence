@@ -24,8 +24,8 @@ public class advanced {
                 System.out.println("2- list all Pets");
                 System.out.println("3- delete a pet");
                 System.out.println("4- exit");
-                System.out.println("5- save the obj");
-                System.out.println("6- load the obj");
+                System.out.println("5- save the json");
+                System.out.println("6- load the json");
                 Storage objSave = new Storage();
                 
                 choice = scanner.nextInt();
@@ -39,7 +39,8 @@ public class advanced {
                         Pet newPet=null;
                         int animal;
                         try {
-                            do {
+                            do { 
+
                                 System.out.println("which Pet is wished to be created ?");
                                 System.out.println("1- Gold Fish");
                                 System.out.println("2- Guppy");
@@ -51,19 +52,19 @@ public class advanced {
                                 
                                 switch (animal) {
                                     case 1:
-                                    newPet= new Goldfish(petName,owner);
+                                    newPet= new Goldfish(petName,owner,"Goldfish");
                                     System.out.println("gold fish ? nice choice ");
                                         break;
                                     case 2:
-                                    newPet= new Guppy(petName,owner);
+                                    newPet= new Guppy(petName,owner,"Guppy");
                                     System.out.println("guppy ? yea its cool ");
                                         break;
                                     case 3:
-                                    newPet= new Rabbit(petName,owner);
+                                    newPet= new Rabbit(petName,owner,"Rabbit");
                                     System.out.println("Rabbit ? damn messy, wanna live in Stable ? ");
                                         break;
                                     case 4:
-                                    newPet= new Cat(petName,owner);
+                                    newPet= new Cat(petName,owner,"Cat");
                                     System.out.println("worst choice ever, pay ur money to food and care for something selfish that it eats u if u die :))");
                                         break;
                                     default:
@@ -91,23 +92,31 @@ public class advanced {
                         
                         
                         //System.out.println(animalList.size());
-                        System.out.println("position " +count+ " is called "+ pet.getName()+ " and belongs to "+pet.getOwner()+ " to cared for u need to: ");
+                        System.out.println("position " +count+ " is "+pet.getType() +" called "+ pet.getName()+ " and belongs to "+pet.getOwner()+ " to cared for u need to: ");
                         
                         if (pet instanceof Cat) {
                             Cat cat = (Cat)pet;
+                            cat.careFor();
+                            System.out.println("moving Style: ");
                             cat.walk();
                         }
                         if (pet instanceof Goldfish) {
                             Goldfish goldfish=(Goldfish)pet;
+                            goldfish.careFor();
+                            System.out.println("moving Style: ");
                             goldfish.swim();
                         }
                         if (pet instanceof Guppy) {
                             Guppy guppy=(Guppy)pet;
+                            guppy.careFor();
+                            System.out.println("moving Style: ");
                             guppy.swim();
                             
                         }
                         if (pet instanceof Rabbit) {
                             Rabbit rabbit=(Rabbit)pet;
+                            rabbit.careFor();
+                            System.out.println("moving Style: ");
                             rabbit.walk();
                         }
                         System.out.println("");
@@ -127,12 +136,12 @@ public class advanced {
                 System.out.println("saved to file "+ fileName);
                 }else if (choice==6) {
                     animalList= new ArrayList<Pet>();                      
-                    System.out.println("whats the file name and type to be loaded ? use . to define type ");
+                    System.out.println("write file name and adress of file ");
                     String fileName=scanner.nextLine();
                     animalList=objSave.loadFromFile(fileName);
-                System.out.println("saved to file "+ fileName);
+                    System.out.println("loaded file "+ fileName);
                 } else {
-                    System.out.println("the valid number range is between 1 to 3 ");
+                    System.out.println("the valid number range is 1 to 6 ");
                 }
             } catch (InputMismatchException Exception) {
                 

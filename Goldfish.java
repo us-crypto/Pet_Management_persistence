@@ -9,8 +9,8 @@ public class Goldfish extends Fish{
      * @param owner owner name 
      * @throws Exception
      */
-    public Goldfish(String name , String owner) throws Exception{
-        super( name ,  owner);
+    public Goldfish(String name, String owner, String type) throws Exception{
+        super(name, owner, type);
         //        super("aaaaa","sssss");  
     }
 

@@ -9,9 +9,8 @@ public class Rabbit extends Mammal{
      * @param owner owner name 
      * @throws Exception
      */
-    public Rabbit(String name , String owner) throws Exception{
-       
-        super( name ,  owner);
+    public Rabbit(String name, String owner, String type) throws Exception{
+        super(name, owner, type);
     }
     /**shows what u need for rabbit care 
      * text function no parameter no return

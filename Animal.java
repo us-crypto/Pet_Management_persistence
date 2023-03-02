@@ -8,6 +8,10 @@ interface Animal {
 
     void setOwner(String string);
 
+    String getType();
+
+    void setType(String string);
+
     String careFor();
 
     

@@ -9,8 +9,8 @@ public abstract class Mammal extends Pet{
      * @param owner owner's name 
      * @throws Exception
      */
-    public Mammal(String name, String owner) throws Exception{
-        super(name, owner);
+    public Mammal(String name, String owner, String type) throws Exception{
+        super(name, owner, type);
     }
     /**
      * text function no parameter no return

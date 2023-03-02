@@ -5,17 +5,27 @@
 public abstract class Pet implements Animal  {
     private String name;
     private String owner;
+    private String type;
     /**
+
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
      * This constructor create a new Pet with a new name and sets an owner.
      * @param name String name of the pet
      * @param owner String name of the owner
      * @throws Exception
      */
-    public Pet(String name , String owner) throws Exception {
+    public Pet(String name , String owner, String type) throws Exception {
         // System.out.println("name= "+name);
         // System.out.println("owner= "+owner);
         
         checker(name, owner);
+        setType(type);
         setOwner(owner);
         setName(name);
     }
@@ -26,6 +36,13 @@ public abstract class Pet implements Animal  {
         if (owner.length()<1) {
             throw new ShortOwnerNameException ("owner name is too short");
         }
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
     /**
      * shows what u need for pet care 
