@@ -42,7 +42,8 @@ public class Storage {
      */
     public List<Pet> loadFromFile(String fileName) throws Exception {
         String file = "C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\" + fileName;
-        String json = readFileAsString(file);
+        //String file2 = new String("C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\" + fileName);
+        String json = new String(Files.readAllBytes(Paths.get(file)));
         List<Pet> animal = new ArrayList<Pet>();
         JSONArray jsonArray = new JSONArray(json);
         Pet saved = null;
@@ -53,6 +54,7 @@ public class Storage {
             switch ((String) singleObj.get("type")) {
                 case "Goldfish":
                     saved = new Goldfish(name, owner);
+                    
                     break;
                 case "Cat":
                     saved = new Cat(name, owner);
@@ -74,7 +76,7 @@ public class Storage {
     }
 
     /**
-     * 
+     * function changes bytes to String
      * @param file location of the chosen file
      * @return String of Json Obj
      * @throws Exception if the string isnt created by any reason
