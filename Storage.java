@@ -47,16 +47,16 @@ public class Storage {
             String owner = (String)singleObj.get("owner");
             switch ((String)singleObj.get("type")) {
                 case "Goldfish":
-                saved= new Goldfish(name,owner,"Goldfish");
+                saved= new Goldfish(name,owner);
                     break;
                 case "Cat":
-                saved= new Cat(name,owner,"Cat");
+                saved= new Cat(name,owner);
                     break;
                 case "Rabbit":
-                saved= new Rabbit(name,owner,"Rabbit");
+                saved= new Rabbit(name,owner);
                     break;
                 case "Guppy":
-                saved= new Guppy(name,owner,"Guppy");
+                saved= new Guppy(name,owner);
                     break;
                 default:
                 throw new WrongJsonDataException("wrong Json Data was saved");

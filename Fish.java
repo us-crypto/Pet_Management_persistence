@@ -11,8 +11,8 @@ public abstract class Fish extends Pet{
      * @param owner owner name 
      * @throws Exception
      */
-    public Fish(String name, String owner, String type) throws Exception{
-        super(name, owner, type);
+    public Fish(String name, String owner) throws Exception{
+        super(name, owner);
     }
     /**shows what u need for fish care 
      * it calls a change water function

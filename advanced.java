@@ -16,7 +16,7 @@ public class advanced {
         String petName;
         Scanner scanner=new Scanner(System.in);
         List<Pet> animalList= new ArrayList<Pet>();  
-        while (true) {
+           while (true) {
             
             try {
                 System.out.println("choose the functionality:");
@@ -52,19 +52,19 @@ public class advanced {
                                 
                                 switch (animal) {
                                     case 1:
-                                    newPet= new Goldfish(petName,owner,"Goldfish");
+                                    newPet= new Goldfish(petName,owner);
                                     System.out.println("gold fish ? nice choice ");
                                         break;
                                     case 2:
-                                    newPet= new Guppy(petName,owner,"Guppy");
+                                    newPet= new Guppy(petName,owner);
                                     System.out.println("guppy ? yea its cool ");
                                         break;
                                     case 3:
-                                    newPet= new Rabbit(petName,owner,"Rabbit");
+                                    newPet= new Rabbit(petName,owner);
                                     System.out.println("Rabbit ? damn messy, wanna live in Stable ? ");
                                         break;
                                     case 4:
-                                    newPet= new Cat(petName,owner,"Cat");
+                                    newPet= new Cat(petName,owner);
                                     System.out.println("worst choice ever, pay ur money to food and care for something selfish that it eats u if u die :))");
                                         break;
                                     default:

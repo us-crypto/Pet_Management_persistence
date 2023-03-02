@@ -9,8 +9,9 @@ public class Guppy extends Fish{
      * @param owner owner name 
      * @throws Exception
      */
-    public Guppy(String name, String owner, String type) throws Exception{
-        super(name, owner, type);
+    public Guppy(String name, String owner) throws Exception{
+        super(name, owner);
+        setType("Guppy");
     }
     /**
      * Method that let's the guppy swims

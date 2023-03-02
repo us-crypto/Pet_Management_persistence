@@ -20,12 +20,11 @@ public abstract class Pet implements Animal  {
      * @param owner String name of the owner
      * @throws Exception
      */
-    public Pet(String name , String owner, String type) throws Exception {
+    public Pet(String name , String owner) throws Exception {
         // System.out.println("name= "+name);
         // System.out.println("owner= "+owner);
         
         checker(name, owner);
-        setType(type);
         setOwner(owner);
         setName(name);
     }
