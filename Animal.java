@@ -1,3 +1,6 @@
+/**
+ * interface of A nimal with all required functions 
+ */
 interface Animal {
     /**
      * getter of animal name
