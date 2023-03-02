@@ -75,14 +75,4 @@ public class Storage {
         return animal; // list;
     }
 
-    /**
-     * function changes bytes to String
-     * @param file location of the chosen file
-     * @return String of Json Obj
-     * @throws Exception if the string isnt created by any reason
-     */
-    public static String readFileAsString(String file) throws Exception {
-        return new String(Files.readAllBytes(Paths.get(file)));
-    }
-
 }

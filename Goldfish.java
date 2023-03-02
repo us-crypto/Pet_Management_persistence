@@ -17,7 +17,7 @@ public class Goldfish extends Fish {
     }
 
     /**
-     * Method that let's the guppy swims
+     * Method that let's the Goldfish swims
      * text function no parameter no return
      * 
      * @return String moving mode for specific animal
