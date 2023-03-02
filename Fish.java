@@ -1,6 +1,6 @@
 
 /***
- * classe fishes is childclass of pet and has a input String Name and owner name
+ * class fishes is childclass of pet and has a input String Name and owner name
  * and has 2 functions and a cunstructur
  */
 public abstract class Fish extends Pet {
@@ -17,8 +17,10 @@ public abstract class Fish extends Pet {
     }
 
     /**
-     * shows what u need for fish care
-     * it calls a change water function
+     * Cunstructor to create a new fish. Super constructor of Pet is called.
+     * both input String type
+     * 
+     * @return String care for specific animal 
      */
     public String careFor() {
         changeWater();
@@ -28,11 +30,13 @@ public abstract class Fish extends Pet {
 
     /**
      * Method that let's the fish swim
+     * @return String moving mode for specific animal
      */
     public abstract String swim();
 
     /**
      * function prints care for fishes
+     * @return String care for things for specific animal
      */
     public String changeWater() {
         System.out.println("change water");

@@ -1,5 +1,5 @@
 /***
- * classe rabbit is childclass of mammals and has a input String Name and owner
+ * class rabbit is childclass of mammals and has a input String Name and owner
  * name and has 2 functions and a cunstructur
  */
 public class Rabbit extends Mammal {
@@ -13,11 +13,13 @@ public class Rabbit extends Mammal {
      */
     public Rabbit(String name, String owner) throws Exception {
         super(name, owner);
+        setType("Rabbit");
     }
 
     /**
      * shows what u need for rabbit care
      * text function no parameter no return
+     * @return caring mode of specific animal
      */
     public String careFor() {
         System.out.println("clean their barn");
@@ -28,7 +30,7 @@ public class Rabbit extends Mammal {
      * Method that let's the rabbit walk
      * text function no parameter no return
      * 
-     * @return
+     * @return moving mode of specific animal
      */
     public String walk() {
         System.out.println("jumping ");

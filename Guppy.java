@@ -1,5 +1,5 @@
 /***
- * classe guppy is childclass of fishes and has a input String Name and owner
+ * class guppy is childclass of fishes and has a input String Name and owner
  * name and has 2 functions and a cunstructur
  */
 public class Guppy extends Fish {
@@ -19,7 +19,7 @@ public class Guppy extends Fish {
     /**
      * Method that let's the guppy swims
      * 
-     * @return
+     * @return String moving mode for specific animal
      */
     public String swim() {
         System.out.println("swimming in circles ");

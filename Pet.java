@@ -1,6 +1,6 @@
 
 /***
- * classe pet is superclass of mammals and fishes and has a input String Name
+ * class pet is superclass of mammals and fishes and has a input String Name
  * and owner name and a cunstructur
  */
 public abstract class Pet implements Animal {
@@ -38,14 +38,15 @@ public abstract class Pet implements Animal {
     }
 
     /**
-     * 
+     * gets the animal type 
+     * @return String type of animal
      */
     public String getType() {
         return this.type;
     }
 
     /**
-     * 
+     * sets the animal type 
      */
     public void setType(String type) {
         this.type = type;
@@ -54,6 +55,7 @@ public abstract class Pet implements Animal {
     /**
      * shows what u need for pet care
      * Gives a console output what to do.
+     * @return String caring mode for specific animal
      */
     public abstract String careFor();
 

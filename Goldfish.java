@@ -1,5 +1,5 @@
 /***
- * classe goldfish is childclass of fishes and has a input String Name and owner
+ * class goldfish is childclass of fishes and has a input String Name and owner
  * name and has 2 functions and a cunstructur
  */
 public class Goldfish extends Fish {
@@ -20,7 +20,7 @@ public class Goldfish extends Fish {
      * Method that let's the guppy swims
      * text function no parameter no return
      * 
-     * @return
+     * @return String moving mode for specific animal
      */
     public String swim() {
         System.out.println("swimming here and there. ");
