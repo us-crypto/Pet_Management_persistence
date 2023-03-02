@@ -1,5 +1,8 @@
 import java.lang.Exception;
-
+/**
+ * this class defines a cat
+ * 
+ */
 public class Cat extends Mammal {
     /**
      * Cunstructor to create a new cat. Super constructor of mammal is called.
