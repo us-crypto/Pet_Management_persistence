@@ -13,8 +13,10 @@ public class Goldfish extends Fish {
      */
     public Goldfish(String name, String owner) throws Exception {
         super(name, owner);
-        setType("Goldfish");
+        setType("Guppy");
     }
+
+    
 
     /**
      * Method that let's the Goldfish swims
@@ -23,8 +25,8 @@ public class Goldfish extends Fish {
      * @return String moving mode for specific animal
      */
     public String swim() {
-        System.out.println("swimming here and there. ");
-        return "swimming here and there";
+        System.out.println("swimming here and there.");
+        return "swimming here and there.";
     }
 
 }

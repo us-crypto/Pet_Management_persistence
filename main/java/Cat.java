@@ -35,7 +35,7 @@ public class Cat extends Mammal {
      * @return String the walk method
      */
     public String walk() {
-        System.out.println("sneaking ");
+        System.out.println("sneaking");
         return "sneaking";
     }
 
