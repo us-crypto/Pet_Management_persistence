@@ -25,30 +25,35 @@ public class unitTest {
             });
 
         }
+        @Test
         public void catInstanceTest() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("test of Cat Obj",true, a instanceof Cat);
         }
+        @Test
         public void catGetterTest() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("pet name checker", petName, a.getName());
         }
+        @Test
         public void catOwnerGetterTest() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("owner name checker", ownerName, a.getOwner());
         }
+        @Test
         public void catTypeTester() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("pet type checker", Cat.class.getName(), a.getType());
         }
+        @Test
         public void ownerSetterTester() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
@@ -58,6 +63,7 @@ public class unitTest {
             assertEquals("owner name checker 2", ownerName2, a.getOwner());
 
         }
+        @Test
         public void catPetSetterTester() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
@@ -67,6 +73,7 @@ public class unitTest {
             a.setType("Dog");
             assertEquals("pet name checker 2", petName2, a.getName());
         }
+        @Test
         public void catTypeSetterTest() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
@@ -77,18 +84,21 @@ public class unitTest {
             Cat vvv=new Cat("aaaa","aaaa");
             assertEquals("sneaking", vvv.walk());
         }
+        @Test
         public void catTypeGetterTest() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("pet type checker 2", "Dog", a.getType());
         }
+        @Test
         public void catCareForTester() throws Exception {
             String petName ="ffff";
             String ownerName="ssss";
             Pet a = new Cat(petName,ownerName);
             assertEquals("brush their fur", a.careFor());
         }
+        @Test
         public void catWalkTester() throws Exception {
             Cat vvv=new Cat("aaaa","aaaa");
             assertEquals("sneaking", vvv.walk());
