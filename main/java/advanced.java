@@ -1,4 +1,5 @@
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -132,13 +133,17 @@ public class advanced {
                 } else if (choice==5) {
                     System.out.println("whats the file name and type ? use . to define type ");
                     String fileName=scanner.nextLine();
-                    objSave.saveToFile(fileName,animalList);
+                    System.out.println("write the folder u wanna save the file to ( every slash / must be written 2 times in java ) ");
+                    String adresse=scanner.nextLine();
+                    objSave.saveToFile( adresse, fileName,animalList);
                 System.out.println("saved to file "+ fileName);
                 }else if (choice==6) {
                     animalList= new ArrayList<Pet>();                      
                     System.out.println("write file name and adress of file ");
                     String fileName=scanner.nextLine();
-                    animalList=objSave.loadFromFile(fileName);
+                    System.out.println("write the folder u wanna load the file from ( with a slash at the end of the line / ) ");
+                    String adresse=scanner.nextLine();
+                    animalList=objSave.loadFromFile(adresse , fileName);
                     System.out.println("loaded file "+ fileName);
                 } else {
                     System.out.println("the valid number range is 1 to 6 ");
@@ -147,6 +152,8 @@ public class advanced {
                 
                 System.out.println("input data must be a number try again");
                 scanner.nextLine();
+            }catch (FileNotFoundException Exception){
+                System.out.println("here exists no file with this name ");
             }catch (NoSuchElementException Exception) {
                 System.out.println("short names is given for pet or owner ");
             } catch (IOException Exception){

@@ -23,10 +23,10 @@ public class Storage {
      * @param outPut   file in the folder with json array
      * @throws IOException any issue if it wont be created
      */
-    public void saveToFile(String fileName, List<Pet> outPut) throws IOException {
+    public void saveToFile(String adresse, String fileName, List<Pet> outPut) throws IOException {
         String json = new Gson().toJson(outPut);
         File file1 = new File(fileName);
-        FileWriter fw = new FileWriter(file1);
+        FileWriter fw = new FileWriter(adresse+file1);
         PrintWriter pw = new PrintWriter(fw);
         pw.write(json);
         pw.close();
@@ -40,8 +40,8 @@ public class Storage {
      * @return String of json
      * @throws Exception
      */
-    public List<Pet> loadFromFile(String fileName) throws Exception {
-        String file = "C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\" + fileName;
+    public List<Pet> loadFromFile(String adresse , String fileName) throws Exception {
+        String file = adresse + fileName;
         //String file2 = new String("C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\" + fileName);
         String json = new String(Files.readAllBytes(Paths.get(file)));
         List<Pet> animal = new ArrayList<Pet>();
