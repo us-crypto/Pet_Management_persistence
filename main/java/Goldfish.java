@@ -13,7 +13,7 @@ public class Goldfish extends Fish {
      */
     public Goldfish(String name, String owner) throws Exception {
         super(name, owner);
-        setType("Guppy");
+        setType("Goldfish");
     }
 
     
