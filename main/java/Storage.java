@@ -54,7 +54,6 @@ public class Storage {
             switch ((String) singleObj.get("type")) {
                 case "Goldfish":
                     saved = new Goldfish(name, owner);
-                    
                     break;
                 case "Cat":
                     saved = new Cat(name, owner);

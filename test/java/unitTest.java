@@ -1,6 +1,10 @@
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -425,5 +429,149 @@ public class unitTest {
         Rabbit test2 = new Rabbit(petName, ownerName);
         assertEquals("jumping ", test2.walk());
     }
-    
+    @Test
+    public void storageFunctionTest() throws Exception {
+        boolean checkValidity=false;
+        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
+        Storage a = new Storage();
+        List<Pet> animalList= new ArrayList<Pet>(); 
+        animalList.add(new Rabbit("petName", "ownerName"));
+        a.saveToFile(adress, "a.json", animalList);
+        List<Pet> load= a.loadFromFile(adress, "a.json");
+        for (Pet pet : load) {
+            for (Pet petSaved : animalList) {
+                    checkValidity=true;
+            }
+        }
+        assertTrue("true", checkValidity);
+    }
+    @Test
+    public void testPetNameLoader() throws Exception {
+        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
+        Storage a = new Storage();
+        List<Pet> animalList= new ArrayList<Pet>(); 
+        animalList.add(new Rabbit("petName", "ownerName"));
+        animalList.add(new Cat("petName", "ownerName"));
+        animalList.add(new Guppy("petName", "ownerName"));
+        animalList.add(new Goldfish("petName", "ownerName"));
+        a.saveToFile(adress, "a.json", animalList);
+        List<Pet> loadList = new ArrayList<Pet>();
+        loadList=a.loadFromFile(adress, "a.json");
+        String first=animalList.get(0).getName();
+        String sec=animalList.get(1).getName();
+        String third=animalList.get(2).getName();
+        String fourth=animalList.get(3).getName();
+
+
+        String lfirst=loadList.get(0).getName();
+        String lsec=loadList.get(1).getName();
+        String lthird=loadList.get(2).getName();
+        String lfourth=loadList.get(3).getName();
+
+
+
+
+        assertEquals(first,lfirst);
+        assertEquals(sec,lsec);
+        assertEquals(third,lthird);
+        assertEquals(fourth,lfourth);
+
+
+    }
+
+    @Test
+    public void testtypeloader() throws Exception {
+        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
+        Storage a = new Storage();
+        List<Pet> animalList= new ArrayList<Pet>(); 
+        animalList.add(new Rabbit("petName", "ownerName"));
+        animalList.add(new Cat("petName", "ownerName"));
+        animalList.add(new Guppy("petName", "ownerName"));
+        animalList.add(new Goldfish("petName", "ownerName"));
+        a.saveToFile(adress, "a.json", animalList);
+        List<Pet> loadList = new ArrayList<Pet>();
+        loadList=a.loadFromFile(adress, "a.json");
+
+        String typ=animalList.get(0).getType();
+        String typ1=animalList.get(1).getType();
+        String typ2=animalList.get(2).getType();
+        String typ3=animalList.get(3).getType();
+
+
+        String ltyp=loadList.get(0).getType();
+        String ltyp1=loadList.get(1).getType();
+        String ltyp2=loadList.get(2).getType();
+        String ltyp3=loadList.get(3).getType();
+
+        
+        assertEquals(typ,ltyp);
+        assertEquals(typ1,ltyp1);
+        assertEquals(typ2,ltyp2);
+        assertEquals(typ3,ltyp3);
+    }
+
+    @Test
+    public void testOwnerName() throws Exception {
+        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
+        Storage a = new Storage();
+        List<Pet> animalList= new ArrayList<Pet>(); 
+        animalList.add(new Rabbit("petName", "ownerName"));
+        animalList.add(new Cat("petName", "ownerName"));
+        animalList.add(new Guppy("petName", "ownerName"));
+        animalList.add(new Goldfish("petName", "ownerName"));
+        a.saveToFile(adress, "a.json", animalList);
+        List<Pet> loadList = new ArrayList<Pet>();
+        loadList=a.loadFromFile(adress, "a.json");
+
+
+        String firsto=animalList.get(0).getOwner();
+        String seco=animalList.get(1).getOwner();
+        String thirdo=animalList.get(2).getOwner();
+        String fourtho=animalList.get(3).getOwner();
+
+
+        String lfirsto=loadList.get(0).getOwner();
+        String lseco=loadList.get(1).getOwner();
+        String lthirdo=loadList.get(2).getOwner();
+        String lfourtho=loadList.get(3).getOwner();
+
+
+        assertEquals(firsto,lfirsto);
+        assertEquals(seco,lseco);
+        assertEquals(thirdo,lthirdo);
+        assertEquals(fourtho,lfourtho);
+        
+
+    }
+
+    @Test
+    public void testCompleteForSchleife() throws Exception {
+        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
+        Storage a = new Storage();
+        List<Pet> animalList= new ArrayList<Pet>(); 
+        animalList.add(new Rabbit("petName", "ownerName"));
+        animalList.add(new Cat("petName", "ownerName"));
+        animalList.add(new Guppy("petName", "ownerName"));
+        animalList.add(new Goldfish("petName", "ownerName"));
+        a.saveToFile(adress, "a.json", animalList);
+        List<Pet> loadList = new ArrayList<Pet>();
+        loadList=a.loadFromFile(adress, "a.json");
+        int i =0;
+        for (Pet pet : loadList) {
+            String savedPet = pet.getOwner();
+            String loadedPet=animalList.get(i).getOwner();
+            assertEquals(savedPet,loadedPet);
+
+            String savedOwner = pet.getName();
+            String loadedOwner=animalList.get(i).getName();
+            assertEquals(savedOwner,loadedOwner);
+
+            String savedType = pet.getType();
+            String loadedType=animalList.get(i).getType();
+            assertEquals(savedType,loadedType);
+            i++;
+        }
+        
+
+    }
 }
