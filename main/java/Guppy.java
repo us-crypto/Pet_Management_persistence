@@ -12,8 +12,7 @@ public class Guppy extends Fish {
      * @throws Exception if creation of Guppy wasnt sucsessful this will show up
      */
     public Guppy(String name, String owner) throws Exception {
-        super(name, owner);
-        setType("Guppy");
+        super(name, owner,Guppy.class.getName());
     }
 
     /**
@@ -25,5 +24,7 @@ public class Guppy extends Fish {
         System.out.println("swimming in circles ");
         return "swimming in circles ";
     }
+
+
 
 }

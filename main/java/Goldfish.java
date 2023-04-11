@@ -12,8 +12,7 @@ public class Goldfish extends Fish {
      * @throws Exception if creation of Goldfish wasnt sucsessful this will show up
      */
     public Goldfish(String name, String owner) throws Exception {
-        super(name, owner);
-        setType("Goldfish");
+        super(name, owner,Guppy.class.getName());
     }
 
     

@@ -11,8 +11,8 @@ public abstract class Mammal extends Pet {
      * @param owner owner's name
      * @throws Exception if creation of Mammal wasnt sucsessful this will show up
      */
-    public Mammal(String name, String owner) throws Exception {
-        super(name, owner);
+    public Mammal(String name, String owner, String test) throws Exception {
+        super(name, owner,test);
     }
 
     /**

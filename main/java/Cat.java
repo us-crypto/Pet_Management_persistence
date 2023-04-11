@@ -13,8 +13,8 @@ public class Cat extends Mammal {
      * @throws Exception if creation of Cat wasnt sucsessful this will show up
      */
     public Cat(String name, String owner) throws Exception {
-        super(name, owner);
-        setType("Cat");
+        super(name, owner,Cat.class.getName());
+        
 
     }
 
@@ -38,5 +38,8 @@ public class Cat extends Mammal {
         System.out.println("sneaking");
         return "sneaking";
     }
+
+
+
 
 }

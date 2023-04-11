@@ -75,7 +75,6 @@ public class unitTest {
         String petName2 = "petName2";
         Pet a = new Cat(petName, ownerName);
         a.setName(petName2);
-        a.setType("Dog");
         assertEquals("pet name checker 2", petName2, a.getName());
     }
 
@@ -84,7 +83,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet a = new Cat(petName, ownerName);
-        a.setType("Dog");
         assertEquals("pet type checker 2", "Dog", a.getType());
         assertEquals("brush their fur", a.careFor());
         Cat vvv = new Cat("aaaa", "aaaa");
@@ -181,7 +179,6 @@ public class unitTest {
         String petName2 = "petName2";
         Pet test2 = new Goldfish(petName, ownerName);
         test2.setName(petName2);
-        test2.setType("Dog");
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
 
@@ -190,7 +187,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Goldfish(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
 
@@ -199,7 +195,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Goldfish(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
 
@@ -285,7 +280,6 @@ public class unitTest {
         String petName2 = "petName2";
         Pet test2 = new Guppy(petName, ownerName);
         test2.setName(petName2);
-        test2.setType("Dog");
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
 
@@ -294,7 +288,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Guppy(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
 
@@ -303,7 +296,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Guppy(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
 
@@ -392,7 +384,6 @@ public class unitTest {
         String petName2 = "petName2";
         Pet test2 = new Rabbit(petName, ownerName);
         test2.setName(petName2);
-        test2.setType("Dog");
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
     
@@ -401,7 +392,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Rabbit(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
     
@@ -410,7 +400,6 @@ public class unitTest {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Rabbit(petName, ownerName);
-        test2.setType("Dog");
         assertEquals("pet type checker 2", "Dog", test2.getType());
     }
     

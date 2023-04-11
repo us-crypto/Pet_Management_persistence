@@ -37,12 +37,6 @@ interface Animal {
      */
     String getType();
 
-    /**
-     * setter of animal type
-     * 
-     * @param string String type of animal
-     */
-    void setType(String string);
 
     /**
      * action needed to care for specific animal

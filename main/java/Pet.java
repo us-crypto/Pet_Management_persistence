@@ -7,7 +7,7 @@ public abstract class Pet implements Animal {
     private String name;
     private String owner;
     private String type;
-
+    protected String test;
     /**
      * This constructor create a new Pet with a new name and sets an owner.
      * 
@@ -15,10 +15,11 @@ public abstract class Pet implements Animal {
      * @param owner String name of the owner
      * @throws Exception if creation of Pet wasnt sucsessful this will show up
      */
-    public Pet(String name, String owner) throws Exception {
+    public Pet(String name, String owner, String test) throws Exception {
         checker(name, owner);
         setOwner(owner);
         setName(name);
+        setType(test);
     }
 
     /**
@@ -47,9 +48,11 @@ public abstract class Pet implements Animal {
 
     /**
      * sets the animal type 
+     * @return 
      */
-    public void setType(String type) {
-        this.type = type;
+    private String setType(String test){
+        this.type=test;
+        return this.type;
     }
 
     /**

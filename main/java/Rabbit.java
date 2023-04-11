@@ -12,8 +12,10 @@ public class Rabbit extends Mammal {
      * @throws Exception if creation of Rabbit wasnt sucsessful this will show up
      */
     public Rabbit(String name, String owner) throws Exception {
-        super(name, owner);
-        setType("Rabbit");
+        
+
+        super(name, owner,Rabbit.class.getName());
+        
     }
 
     /**
@@ -36,5 +38,6 @@ public class Rabbit extends Mammal {
         System.out.println("jumping ");
         return "jumping ";
     }
+
 
 }
