@@ -23,7 +23,7 @@ public abstract class Fish extends Pet {
      * @return String care for specific animal 
      */
     public String careFor() {
-        changeWater();
+        
         String reurn = changeWater();
         return reurn;
     }
@@ -39,7 +39,6 @@ public abstract class Fish extends Pet {
      * @return String care for things for specific animal
      */
     public String changeWater() {
-        System.out.println("change water");
         return "change water";
     }
 }

@@ -93,32 +93,31 @@ public class advanced {
                         
                         
                         //System.out.println(animalList.size());
-                        System.out.println("position " +count+ " is "+pet.getType() +" called "+ pet.getName()+ " and belongs to "+pet.getOwner()+ " to cared for u need to: ");
+                        System.out.println("position " +count+ " is "+pet.getType() +" called "+ pet.getName()+ " and belongs to "+pet.getOwner()+ ", to cared for u need to: ");
                         
                         if (pet instanceof Cat) {
                             Cat cat = (Cat)pet;
-                            cat.careFor();
+                            System.out.println(cat.careFor());
                             System.out.println("moving Style: ");
-                            cat.walk();
+                            System.out.println(cat.walk());
                         }
                         if (pet instanceof Goldfish) {
                             Goldfish goldfish=(Goldfish)pet;
-                            goldfish.careFor();
+                            System.out.println(goldfish.careFor());
                             System.out.println("moving Style: ");
-                            goldfish.swim();
+                            System.out.println(goldfish.swim());
                         }
                         if (pet instanceof Guppy) {
                             Guppy guppy=(Guppy)pet;
-                            guppy.careFor();
+                            System.out.println(guppy.careFor()); 
                             System.out.println("moving Style: ");
-                            guppy.swim();
-                            
+                            System.out.println(guppy.swim());
                         }
                         if (pet instanceof Rabbit) {
                             Rabbit rabbit=(Rabbit)pet;
-                            rabbit.careFor();
+                            System.out.println(rabbit.careFor());
                             System.out.println("moving Style: ");
-                            rabbit.walk();
+                            System.out.println(rabbit.walk());
                         }
                         System.out.println("");
                         count++;

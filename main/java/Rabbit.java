@@ -24,7 +24,6 @@ public class Rabbit extends Mammal {
      * @return caring mode of specific animal
      */
     public String careFor() {
-        System.out.println("clean their barn");
         return "clean their barn";
     }
 
@@ -35,7 +34,6 @@ public class Rabbit extends Mammal {
      * @return moving mode of specific animal
      */
     public String walk() {
-        System.out.println("jumping ");
         return "jumping ";
     }
 

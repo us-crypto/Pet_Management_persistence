@@ -21,7 +21,6 @@ public class Guppy extends Fish {
      * @return String moving mode for specific animal
      */
     public String swim() {
-        System.out.println("swimming in circles ");
         return "swimming in circles ";
     }
 

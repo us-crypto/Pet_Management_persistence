@@ -24,7 +24,6 @@ public class Cat extends Mammal {
      * @return String care for specific animal
      */
     public String careFor() {
-        System.out.println("brush their fur");
         return "brush their fur";
     }
 
@@ -35,7 +34,6 @@ public class Cat extends Mammal {
      * @return String the walk method
      */
     public String walk() {
-        System.out.println("sneaking");
         return "sneaking";
     }
 

@@ -24,7 +24,6 @@ public class Goldfish extends Fish {
      * @return String moving mode for specific animal
      */
     public String swim() {
-        System.out.println("swimming here and there.");
         return "swimming here and there.";
     }
 
