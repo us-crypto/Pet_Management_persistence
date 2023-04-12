@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.google.gson.Gson;
 import org.json.JSONArray;
@@ -15,6 +16,7 @@ import org.json.JSONObject;
  * this class possibles the storage and loading of a json file
  */
 public class Storage {
+
     /***
      * convertor and storing function of any kinda text to json with any type of
      * file result
@@ -73,5 +75,7 @@ public class Storage {
 
         return animal; // list;
     }
+
+
 
 }

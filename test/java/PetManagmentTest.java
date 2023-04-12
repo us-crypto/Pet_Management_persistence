@@ -1,26 +1,25 @@
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
-public class unitTest {
+public class PetManagmentTest {
 
     @Test
     public void catWrongInputTest() throws Exception {
 
         assertThrows(ShortPetNameException.class, () -> {
-            Pet a = new Cat("", "xxcvxcv");
+           new Cat("", "xxcvxcv");
         });
         assertThrows(ShortPetNameException.class, () -> {
-            Pet a = new Cat("", "");
+            new Cat("", "");
         });
         assertThrows(ShortOwnerNameException.class, () -> {
-            Pet a = new Cat("22", "");
+            new Cat("22", "");
         });
 
     }
@@ -50,7 +49,7 @@ public class unitTest {
     }
 
     @Test
-    public void catTypeTester() throws Exception {
+    public void catTypeTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet a = new Cat(petName, ownerName);
@@ -58,7 +57,7 @@ public class unitTest {
     }
 
     @Test
-    public void catOwnerSetterTester() throws Exception {
+    public void catOwnerSetterTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         String ownerName2 = "ownerName2";
@@ -69,7 +68,7 @@ public class unitTest {
     }
 
     @Test
-    public void catPetSetterTester() throws Exception {
+    public void catNameSetterTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         String petName2 = "petName2";
@@ -78,16 +77,7 @@ public class unitTest {
         assertEquals("pet name checker 2", petName2, a.getName());
     }
 
-    @Test
-    public void catTypeSetterTest() throws Exception {
-        String petName = "ffff";
-        String ownerName = "ssss";
-        Pet a = new Cat(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", a.getType());
-        assertEquals("brush their fur", a.careFor());
-        Cat vvv = new Cat("aaaa", "aaaa");
-        assertEquals("sneaking", vvv.walk());
-    }
+ 
 
     @Test
     public void catTypeGetterTest() throws Exception {
@@ -98,7 +88,7 @@ public class unitTest {
     }
 
     @Test
-    public void catCareForTester() throws Exception {
+    public void catCareForTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet a = new Cat(petName, ownerName);
@@ -106,7 +96,7 @@ public class unitTest {
     }
 
     @Test
-    public void catWalkTester() throws Exception {
+    public void catWalkTest() throws Exception { //GEB: "Test" instead of "Test"
         Cat vvv = new Cat("aaaa", "aaaa");
         assertEquals("sneaking", vvv.walk());
     }
@@ -116,13 +106,13 @@ public class unitTest {
 
 
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Goldfish("", "xxcvxcv");
+            new Goldfish("", "xxcvxcv");
         });
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Goldfish("", "");
+            new Goldfish("", "");
         });
         assertThrows(ShortOwnerNameException.class, () -> {
-            Pet test22 = new Goldfish("22", "");
+            new Goldfish("22", "");
         });
 
     }
@@ -153,7 +143,7 @@ public class unitTest {
     }
 
     @Test
-    public void goldfishTypeTester() throws Exception {
+    public void goldfishTypeTest() throws Exception { //GEB: Naming diffent from Cat //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
 
@@ -162,7 +152,7 @@ public class unitTest {
     }
 
     @Test
-    public void goldfishownerSetterTester() throws Exception {
+    public void goldfishOwnerSetterTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         String ownerName2 = "ownerName2";
@@ -173,7 +163,7 @@ public class unitTest {
     }
 
     @Test
-    public void goldfishPetSetterTester() throws Exception {
+    public void goldfishNameSetterTest() throws Exception { //GEB: Pet in the name of the method //GEB: "Test" instead of "Test" , Pet in the method name
         String petName = "ffff";
         String ownerName = "ssss";
         String petName2 = "petName2";
@@ -182,24 +172,18 @@ public class unitTest {
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
 
+ 
+
     @Test
-    public void goldfishTypeSetterTest() throws Exception {
+    public void goldfishTypeGetterTest() throws Exception { //GEB: Duplicate from Line 147 (goldfishTypeTest)
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Goldfish(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
+        assertEquals("pet type checker 2", "Goldfish", test2.getType());
     }
 
     @Test
-    public void goldfishTypeGetterTest() throws Exception {
-        String petName = "ffff";
-        String ownerName = "ssss";
-        Pet test2 = new Goldfish(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
-    }
-
-    @Test
-    public void goldfishCareForTester() throws Exception {
+    public void goldfishCareForTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Goldfish(petName, ownerName);
@@ -207,24 +191,25 @@ public class unitTest {
     }
 
     @Test
-    public void goldfishWalkTester() throws Exception {
+    public void goldfishSwimTest() throws Exception {
         String petName = "ffff";
         String ownerName = "ssss";
         Goldfish test2 = new Goldfish(petName, ownerName);
-        assertEquals("change water", test2.changeWater());
+        assertEquals("swimming here and there.", test2.swim());
     }
 
+
     @Test
-    public void guppyWrongInputTest() throws Exception {
+    public void guppyWrongInputTest() throws Exception { // unused variables
 
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Guppy("", "xxcvxcv");
+            new Guppy("", "xxcvxcv");
         });
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Guppy("", "");
+            new Guppy("", "");
         });
         assertThrows(ShortOwnerNameException.class, () -> {
-            Pet test22 = new Guppy("22", "");
+            new Guppy("22", "");
         });
 
     }
@@ -255,7 +240,7 @@ public class unitTest {
     }
 
     @Test
-    public void guppyTypeTester() throws Exception {
+    public void guppyTypeTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Guppy(petName, ownerName);
@@ -263,7 +248,7 @@ public class unitTest {
     }
 
     @Test
-    public void guppyownerSetterTester() throws Exception {
+    public void guppyOwnerSetterTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         String ownerName2 = "ownerName2";
@@ -274,7 +259,7 @@ public class unitTest {
     }
 
     @Test
-    public void guppyPetSetterTester() throws Exception {
+    public void guppyNameSetterTest() throws Exception { //GEB: "Test" instead of "Test", Pet in the method name
         String petName = "ffff";
         String ownerName = "ssss";
         String petName2 = "petName2";
@@ -283,24 +268,17 @@ public class unitTest {
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
 
-    @Test
-    public void guppyTypeSetterTest() throws Exception {
-        String petName = "ffff";
-        String ownerName = "ssss";
-        Pet test2 = new Guppy(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
-    }
 
     @Test
     public void guppyTypeGetterTest() throws Exception {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Guppy(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
+        assertEquals("pet type checker 2", "Guppy", test2.getType());
     }
 
     @Test
-    public void guppyCareForTester() throws Exception {
+    public void guppyCareForTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Guppy(petName, ownerName);
@@ -308,13 +286,12 @@ public class unitTest {
     }
 
     @Test
-    public void guppyWalkTester() throws Exception {
+    public void guppySwimTest() throws Exception {
         String petName = "ffff";
         String ownerName = "ssss";
         Guppy test2 = new Guppy(petName, ownerName);
-        assertEquals("change water", test2.changeWater());
+        assertEquals("swimming in circles ", test2.swim());
     }
-
 
 
 
@@ -322,13 +299,13 @@ public class unitTest {
     public void rabbitWrongInputTest() throws Exception {
     
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Rabbit("", "xxcvxcv");
+            new Rabbit("", "xxcvxcv");
         });
         assertThrows(ShortPetNameException.class, () -> {
-            Pet test22 = new Rabbit("", "");
+            new Rabbit("", "");
         });
         assertThrows(ShortOwnerNameException.class, () -> {
-            Pet test22 = new Rabbit("22", "");
+            new Rabbit("22", "");
         });
     
     }
@@ -359,7 +336,7 @@ public class unitTest {
     }
     
     @Test
-    public void rabbitTypeTester() throws Exception {
+    public void rabbitTypeTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Rabbit(petName, ownerName);
@@ -367,7 +344,7 @@ public class unitTest {
     }
     
     @Test
-    public void rabbitownerSetterTester() throws Exception {
+    public void rabbitOwnerSetterTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         String ownerName2 = "ownerName2";
@@ -378,7 +355,7 @@ public class unitTest {
     }
     
     @Test
-    public void rabbitPetSetterTester() throws Exception {
+    public void rabbitNameSetterTest() throws Exception { //GEB: "Test" instead of "Test" , Pet in the method name
         String petName = "ffff";
         String ownerName = "ssss";
         String petName2 = "petName2";
@@ -387,24 +364,17 @@ public class unitTest {
         assertEquals("pet name checker 2", petName2, test2.getName());
     }
     
-    @Test
-    public void rabbitTypeSetterTest() throws Exception {
-        String petName = "ffff";
-        String ownerName = "ssss";
-        Pet test2 = new Rabbit(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
-    }
-    
+
     @Test
     public void rabbitTypeGetterTest() throws Exception {
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Rabbit(petName, ownerName);
-        assertEquals("pet type checker 2", "Dog", test2.getType());
+        assertEquals("pet type checker 2", "Rabbit", test2.getType());
     }
     
     @Test
-    public void rabbitCareForTester() throws Exception {
+    public void rabbitCareForTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Pet test2 = new Rabbit(petName, ownerName);
@@ -412,139 +382,26 @@ public class unitTest {
     }
     
     @Test
-    public void rabbitWalkTester() throws Exception {
+    public void rabbitWalkTest() throws Exception { //GEB: "Test" instead of "Test"
         String petName = "ffff";
         String ownerName = "ssss";
         Rabbit test2 = new Rabbit(petName, ownerName);
         assertEquals("jumping ", test2.walk());
     }
+
     @Test
-    public void storageFunctionTest() throws Exception {
-        boolean checkValidity=false;
+    public void testCompleteForLoop() throws Exception { 
         String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
         Storage a = new Storage();
         List<Pet> animalList= new ArrayList<Pet>(); 
-        animalList.add(new Rabbit("petName", "ownerName"));
+        animalList.add(new Rabbit("petNameR", "ownerNameR"));
+        animalList.add(new Cat("petNameC", "ownerNameC"));
+        animalList.add(new Guppy("petNameG", "ownerNameG"));
+        animalList.add(new Goldfish("petNameGo", "ownerNameGo"));
+        int sizeSend=animalList.size();
         a.saveToFile(adress, "a.json", animalList);
-        List<Pet> load= a.loadFromFile(adress, "a.json");
-        for (Pet pet : load) {
-            for (Pet petSaved : animalList) {
-                    checkValidity=true;
-            }
-        }
-        assertTrue("true", checkValidity);
-    }
-    @Test
-    public void testPetNameLoader() throws Exception {
-        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
-        Storage a = new Storage();
-        List<Pet> animalList= new ArrayList<Pet>(); 
-        animalList.add(new Rabbit("petName", "ownerName"));
-        animalList.add(new Cat("petName", "ownerName"));
-        animalList.add(new Guppy("petName", "ownerName"));
-        animalList.add(new Goldfish("petName", "ownerName"));
-        a.saveToFile(adress, "a.json", animalList);
-        List<Pet> loadList = new ArrayList<Pet>();
-        loadList=a.loadFromFile(adress, "a.json");
-        String first=animalList.get(0).getName();
-        String sec=animalList.get(1).getName();
-        String third=animalList.get(2).getName();
-        String fourth=animalList.get(3).getName();
-
-
-        String lfirst=loadList.get(0).getName();
-        String lsec=loadList.get(1).getName();
-        String lthird=loadList.get(2).getName();
-        String lfourth=loadList.get(3).getName();
-
-
-
-
-        assertEquals(first,lfirst);
-        assertEquals(sec,lsec);
-        assertEquals(third,lthird);
-        assertEquals(fourth,lfourth);
-
-
-    }
-
-    @Test
-    public void testtypeloader() throws Exception {
-        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
-        Storage a = new Storage();
-        List<Pet> animalList= new ArrayList<Pet>(); 
-        animalList.add(new Rabbit("petName", "ownerName"));
-        animalList.add(new Cat("petName", "ownerName"));
-        animalList.add(new Guppy("petName", "ownerName"));
-        animalList.add(new Goldfish("petName", "ownerName"));
-        a.saveToFile(adress, "a.json", animalList);
-        List<Pet> loadList = new ArrayList<Pet>();
-        loadList=a.loadFromFile(adress, "a.json");
-
-        String typ=animalList.get(0).getType();
-        String typ1=animalList.get(1).getType();
-        String typ2=animalList.get(2).getType();
-        String typ3=animalList.get(3).getType();
-
-
-        String ltyp=loadList.get(0).getType();
-        String ltyp1=loadList.get(1).getType();
-        String ltyp2=loadList.get(2).getType();
-        String ltyp3=loadList.get(3).getType();
-
-        
-        assertEquals(typ,ltyp);
-        assertEquals(typ1,ltyp1);
-        assertEquals(typ2,ltyp2);
-        assertEquals(typ3,ltyp3);
-    }
-
-    @Test
-    public void testOwnerName() throws Exception {
-        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
-        Storage a = new Storage();
-        List<Pet> animalList= new ArrayList<Pet>(); 
-        animalList.add(new Rabbit("petName", "ownerName"));
-        animalList.add(new Cat("petName", "ownerName"));
-        animalList.add(new Guppy("petName", "ownerName"));
-        animalList.add(new Goldfish("petName", "ownerName"));
-        a.saveToFile(adress, "a.json", animalList);
-        List<Pet> loadList = new ArrayList<Pet>();
-        loadList=a.loadFromFile(adress, "a.json");
-
-
-        String firsto=animalList.get(0).getOwner();
-        String seco=animalList.get(1).getOwner();
-        String thirdo=animalList.get(2).getOwner();
-        String fourtho=animalList.get(3).getOwner();
-
-
-        String lfirsto=loadList.get(0).getOwner();
-        String lseco=loadList.get(1).getOwner();
-        String lthirdo=loadList.get(2).getOwner();
-        String lfourtho=loadList.get(3).getOwner();
-
-
-        assertEquals(firsto,lfirsto);
-        assertEquals(seco,lseco);
-        assertEquals(thirdo,lthirdo);
-        assertEquals(fourtho,lfourtho);
-        
-
-    }
-
-    @Test
-    public void testCompleteForSchleife() throws Exception {
-        String adress="C:\\xampp\\htdocs\\Dev\\repos\\Pet_Management_persistence\\test\\java\\";
-        Storage a = new Storage();
-        List<Pet> animalList= new ArrayList<Pet>(); 
-        animalList.add(new Rabbit("petName", "ownerName"));
-        animalList.add(new Cat("petName", "ownerName"));
-        animalList.add(new Guppy("petName", "ownerName"));
-        animalList.add(new Goldfish("petName", "ownerName"));
-        a.saveToFile(adress, "a.json", animalList);
-        List<Pet> loadList = new ArrayList<Pet>();
-        loadList=a.loadFromFile(adress, "a.json");
+        List<Pet> loadList=a.loadFromFile(adress, "a.json");
+        int sizeReceived=loadList.size();
         int i =0;
         for (Pet pet : loadList) {
             String savedPet = pet.getOwner();
@@ -560,7 +417,7 @@ public class unitTest {
             assertEquals(savedType,loadedType);
             i++;
         }
-        
+        assertEquals("length test", sizeReceived, sizeSend);
 
     }
 }
