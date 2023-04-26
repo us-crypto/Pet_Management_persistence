@@ -132,18 +132,19 @@ public class advanced {
                 } else if (choice==5) {
                     System.out.println("whats the file name and type ? use . to define type ");
                     String fileName=scanner.nextLine();
-                    System.out.println("write the folder u wanna save the file to ( every slash / must be written 2 times in java ) ");
+                    System.out.println("write the folder u wanna save the file to ( every slash \\ must be written 2 times in java ) ");
                     String adresse=scanner.nextLine();
                     objSave.saveToFile( adresse, fileName,animalList);
                 System.out.println("saved to file "+ fileName);
                 }else if (choice==6) {
                     animalList= new ArrayList<Pet>();                      
-                    System.out.println("write file name and adress of file ");
+                    System.out.println("write file name and define its type by . Ex. aaa.json ");
                     String fileName=scanner.nextLine();
-                    System.out.println("write the folder u wanna load the file from ( with a slash at the end of the line / ) ");
+                    System.out.println("write the file adress with \\ at the end of the line ");
                     String adresse=scanner.nextLine();
                     animalList=objSave.loadFromFile(adresse , fileName);
                     System.out.println("loaded file "+ fileName);
+                    System.out.println("from "+ adresse);
                 } else {
                     System.out.println("the valid number range is 1 to 6 ");
                 }

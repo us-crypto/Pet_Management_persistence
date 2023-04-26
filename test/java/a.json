@@ -1,1 +1,1 @@
-[{"name":"petNameR","owner":"ownerNameR","type":"Rabbit"},{"name":"petNameC","owner":"ownerNameC","type":"Cat"},{"name":"petNameG","owner":"ownerNameG","type":"Guppy"},{"name":"petNameGo","owner":"ownerNameGo","type":"Goldfish"}]
+[{"name":"petNameR","owner":"ownerNameR","type":"mo2.Rabbit"},{"name":"petNameC","owner":"ownerNameC","type":"mo2.Cat"},{"name":"petNameG","owner":"ownerNameG","type":"mo2.Guppy"},{"name":"petNameGo","owner":"ownerNameGo","type":"mo2.Goldfish"}]
